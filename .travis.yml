@@ -14,5 +14,6 @@ before_script:
   - sh ./startup-cargo-daemon.sh
 
 script:
+  - head -n 1 /dev/random
   - mvn -U package cargo:daemon-start
   - mvn -U test -f itest/pom.xml
