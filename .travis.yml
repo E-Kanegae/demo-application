@@ -17,5 +17,5 @@ before_script:
   - sh ./startup-cargo-daemon.sh
 
 script:
-  - mvn -U package cargo:daemon-start -Djava.security.egd=file:/dev/random -Dcargo.jvmargs="-Xms512m -Xmx1024m -Djava.security.egd=file:/dev/random"
-  - mvn -U test -f itest/pom.xml -Djava.security.egd=file:/dev/random
+  - mvn -U package cargo:daemon-start -Djava.security.egd=file:/dev/./urandom -Dcargo.jvmargs="-Xms512m -Xmx1024m -Djava.security.egd=file:/dev/./urandom"
+  - mvn -U test -f itest/pom.xml -Djava.security.egd=file:/dev/./urandom
